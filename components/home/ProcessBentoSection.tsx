@@ -47,7 +47,7 @@ export function ProcessBentoSection() {
         <StaggerReveal className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 lg:gap-4">
           <StaggerItem
             direction="up"
-            className="relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-2xl p-6 lg:row-span-2 lg:min-h-[642px] lg:pb-[22px] lg:pl-6 lg:pr-10 lg:pt-[553px]"
+            className="relative flex min-h-80 flex-col justify-end overflow-hidden p-6 lg:row-span-2 lg:min-h-160.5 lg:pb-5.5 lg:pl-6 lg:pr-10 lg:pt-138.25"
           >
             <Image
               src="/images/home/bento-image.png"
@@ -55,7 +55,7 @@ export function ProcessBentoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 from-[17.5%] to-transparent to-[53%]" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 from-[17.5%] to-transparent to-53%" />
             <div className="relative text-white">
               <h3 className="text-2xl font-medium tracking-tight">
                 {cards[0].title}
@@ -68,7 +68,7 @@ export function ProcessBentoSection() {
 
           <StaggerItem
             direction="up"
-            className="flex min-h-[200px] flex-col justify-end rounded-2xl bg-blue-500 p-5 text-white lg:min-h-[313px]"
+            className="flex min-h-50 flex-col justify-end bg-blue-500 p-5 text-white lg:min-h-78.25"
           >
             <h3 className="text-2xl font-medium tracking-tight">
               {cards[1].title}
@@ -80,7 +80,7 @@ export function ProcessBentoSection() {
 
           <StaggerItem
             direction="up"
-            className="relative flex min-h-[200px] flex-col justify-end overflow-hidden rounded-2xl p-6 lg:min-h-[313px]"
+            className="relative flex min-h-50 flex-col justify-end overflow-hidden p-6 lg:min-h-78.25"
           >
             <Image
               src="/images/home/bento-image.png"
@@ -88,7 +88,7 @@ export function ProcessBentoSection() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 from-[17.5%] to-transparent to-[53%]" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 from-[17.5%] to-transparent to-53%" />
             <div className="relative text-white">
               <h3 className="text-2xl font-medium tracking-tight">
                 {cards[2].title}
@@ -101,7 +101,7 @@ export function ProcessBentoSection() {
 
           <StaggerItem
             direction="up"
-            className="relative min-h-[200px] overflow-hidden rounded-2xl lg:min-h-[313px]"
+            className="relative min-h-50 overflow-hidden lg:min-h-78.25"
           >
             <Image
               src="/images/home/bento-image.png"
@@ -113,7 +113,7 @@ export function ProcessBentoSection() {
 
           <StaggerItem
             direction="up"
-            className="flex min-h-[200px] items-center justify-center rounded-2xl bg-black-500 lg:min-h-[313px]"
+            className="flex min-h-50 items-center justify-center bg-black-500 lg:min-h-78.25"
           >
             <GetStartedButton />
           </StaggerItem>
