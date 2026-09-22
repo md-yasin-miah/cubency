@@ -3,9 +3,12 @@ type PageContainerProps = {
   className?: string;
 };
 
-export function PageContainer({ children, className = "" }: PageContainerProps) {
+export function PageContainer({
+  children,
+  className = "",
+}: PageContainerProps) {
   return (
-    <div className={`mx-auto w-full max-w-[1440px] px-6 lg:px-[50px] ${className}`}>
+    <div className={`mx-auto w-full max-w-360 px-6 lg:px-12.5 ${className}`}>
       {children}
     </div>
   );

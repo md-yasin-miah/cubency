@@ -25,7 +25,7 @@ export function HeroSection() {
               delivering higher ROI that propels your business to new heights.
             </p>
             <div className="flex flex-wrap items-center gap-5">
-              <Button href="#" variant="primary" className="h-[52px] px-4">
+              <Button href="#" variant="primary" className="h-13 px-4">
                 Request a Custom Proposal
               </Button>
               <Button href="#" variant="secondary" showArrow>

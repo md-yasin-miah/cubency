@@ -49,9 +49,7 @@ export default function Home() {
       <Reveal direction="left">
         <WorkflowSection />
       </Reveal>
-      <Reveal direction="up">
-        <IndustryCardsSection />
-      </Reveal>
+      <IndustryCardsSection />
       <Reveal direction="fade">
         <FaqSection />
       </Reveal>
