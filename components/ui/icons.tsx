@@ -106,6 +106,26 @@ export function XIcon({ className, size = 32 }: IconProps) {
   );
 }
 
+export function MenuIcon({ className, size = 24 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden
+    >
+      <path
+        d="M4 7H20M4 12H20M4 17H20"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export function PlayIcon({ className, size = 44 }: IconProps) {
   return (
     <svg

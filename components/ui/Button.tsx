@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { ArrowUpRightIcon } from "./icons";
 
-type ButtonVariant = "primary" | "blue" | "secondary" | "outline";
+type ButtonVariant =
+  | "primary"
+  | "blue"
+  | "secondary"
+  | "outline"
+  | "outlineLight";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -19,6 +24,8 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary: "bg-transparent text-blue-500 hover:text-blue-700 transition-colors",
   outline:
     "bg-transparent border border-black-50 text-foreground hover:bg-black-50/30 transition-colors",
+  outlineLight:
+    "bg-transparent border border-blue-50 text-blue-50 hover:bg-blue-50/10 transition-colors",
 };
 
 export function Button({
