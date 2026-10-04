@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { relatedContent } from "@/components/services/organicGrowthData";
+import type { ServiceRelatedContent } from "@/components/services/servicePageTypes";
 import { PageContainer } from "@/components/ui/PageContainer";
 import { ArrowUpRightIcon } from "@/components/ui/icons";
 
-export function ServiceRelatedSection() {
+type ServiceRelatedSectionProps = {
+  content: ServiceRelatedContent;
+};
+
+export function ServiceRelatedSection({ content }: ServiceRelatedSectionProps) {
   return (
     <section className="bg-white py-12 lg:py-25">
       <PageContainer>
@@ -18,15 +22,15 @@ export function ServiceRelatedSection() {
                 height={21}
                 aria-hidden
               />
-              <span className="text-base text-[#010205]">{relatedContent.label}</span>
+              <span className="text-base text-[#010205]">{content.label}</span>
             </div>
             <h2 className="max-w-[640px] text-[32px] font-semibold leading-tight text-blue-900 lg:text-[56px] lg:leading-[64px]">
-              {relatedContent.title}
+              {content.title}
             </h2>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-[30px]">
-            {relatedContent.cards.map((card) => (
+            {content.cards.map((card) => (
               <Link
                 key={card.title}
                 href={card.href}

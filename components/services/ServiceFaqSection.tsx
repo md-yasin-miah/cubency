@@ -1,10 +1,14 @@
 import Link from "next/link";
-import { serviceFaqs } from "@/components/services/organicGrowthData";
+import type { ServiceFaqItem } from "@/components/services/servicePageTypes";
 import { Button } from "@/components/ui/Button";
 import { PageContainer } from "@/components/ui/PageContainer";
 import Image from "next/image";
 
-export function ServiceFaqSection() {
+type ServiceFaqSectionProps = {
+  faqs: ServiceFaqItem[];
+};
+
+export function ServiceFaqSection({ faqs }: ServiceFaqSectionProps) {
   return (
     <section className="bg-white py-12 lg:py-25">
       <PageContainer>
@@ -44,7 +48,7 @@ export function ServiceFaqSection() {
           </div>
 
           <div className="flex-1 overflow-hidden rounded-2xl bg-faq-bg">
-            {serviceFaqs.map((faq) => (
+            {faqs.map((faq) => (
               <article
                 key={faq.question}
                 className="border-b border-faq-bg bg-white px-6 py-5 last:border-b-0"

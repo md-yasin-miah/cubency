@@ -1,19 +1,33 @@
 import Image from "next/image";
-import { serviceAssets, verticalsContent } from "@/components/services/organicGrowthData";
+import type {
+  ServiceVerticalsAssets,
+  ServiceVerticalsContent,
+} from "@/components/services/servicePageTypes";
 import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
-export function ServiceVerticalsSection() {
+type ServiceVerticalsSectionProps = {
+  content: ServiceVerticalsContent;
+  assets: ServiceVerticalsAssets;
+};
+
+export function ServiceVerticalsSection({
+  content,
+  assets,
+}: ServiceVerticalsSectionProps) {
   return (
     <section className="bg-white py-12 lg:py-25">
       <PageContainer>
         <div className="flex flex-col gap-8 lg:gap-8">
-          <SectionLabel dashWidth="w-[38px]" className="[&_span:last-child]:text-[#6a6a6a] [&_span:last-child]:text-2xl [&_span:last-child]:font-medium">
-            {verticalsContent.label}
+          <SectionLabel
+            dashWidth="w-[38px]"
+            className="[&_span:last-child]:text-[#6a6a6a] [&_span:last-child]:text-2xl [&_span:last-child]:font-medium"
+          >
+            {content.label}
           </SectionLabel>
 
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-            {verticalsContent.cards.map((card, index) => (
+            {content.cards.map((card, index) => (
               <article
                 key={card.title}
                 className="flex min-h-[360px] flex-col justify-between rounded-2xl border border-[#d9deed] bg-white p-8"
@@ -30,7 +44,7 @@ export function ServiceVerticalsSection() {
                     </div>
                     <div className="relative mt-6 ml-auto h-[158px] w-[226px] shrink-0">
                       <Image
-                        src={serviceAssets.verticalEcommerce}
+                        src={assets.verticalEcommerce}
                         alt=""
                         fill
                         className="object-contain object-right-bottom"
@@ -42,7 +56,7 @@ export function ServiceVerticalsSection() {
                   <>
                     <div className="relative ml-auto h-[119px] w-[226px] shrink-0">
                       <Image
-                        src={serviceAssets.verticalB2b}
+                        src={assets.verticalB2b}
                         alt=""
                         fill
                         className="object-contain"

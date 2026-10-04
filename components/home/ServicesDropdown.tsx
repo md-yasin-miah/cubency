@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navServices } from "@/components/services/organicGrowthData";
+import { navServices } from "@/components/services/navServices";
 import { ChevronDownIcon } from "@/components/ui/icons";
 
 type ServicesDropdownProps = {

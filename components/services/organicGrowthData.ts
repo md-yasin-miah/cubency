@@ -150,7 +150,7 @@ export const relatedContent = {
       title: "Growth Strategy & Insights",
       description:
         "Research-led strategy that tells you where the opportunity is.",
-      href: "#",
+      href: "/services/growth-strategy-insights",
       image: serviceAssets.relatedStrategy,
     },
     {
@@ -194,18 +194,38 @@ export const ctaContent = {
   secondaryCta: "Get a Custom Quote",
 };
 
-export const navServices = [
-  {
-    label: "Growth Strategy & Insights",
-    href: "#",
-    slug: "growth-strategy",
+export const organicGrowthPage = {
+  hero: heroContent,
+  heroImages: serviceAssets.hero,
+  problem: {
+    ...problemContent,
+    imageSrc: serviceAssets.problem,
   },
-  { label: "Organic Growth", href: "/services/organic-growth", slug: "organic-growth" },
-  { label: "Paid Growth", href: "#", slug: "paid-growth" },
-  { label: "Creative Solutions", href: "#", slug: "creative" },
-  {
-    label: "Digital Experience & Web Solutions",
-    href: "#",
-    slug: "digital-experience",
+  includes: includesContent,
+  capabilityCards,
+  includesAssets: {
+    capabilityIconA: serviceAssets.capabilityIconA,
+    capabilityIconB: serviceAssets.capabilityIconB,
   },
-] as const;
+  verticals: verticalsContent,
+  verticalsAssets: {
+    verticalEcommerce: serviceAssets.verticalEcommerce,
+    verticalB2b: serviceAssets.verticalB2b,
+  },
+  approach: {
+    ...approachContent,
+    timelineSrc: serviceAssets.approachTimeline,
+  },
+  deliverables: {
+    ...deliverablesContent,
+    photoSrc: serviceAssets.deliverablesPhoto,
+    tickIconSrc: serviceAssets.tickCircle,
+  },
+  expectations: expectationsContent,
+  related: relatedContent,
+  faqs: serviceFaqs,
+  cta: {
+    ...ctaContent,
+    bgSrc: serviceAssets.ctaBg,
+  },
+} as const;

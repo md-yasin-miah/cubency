@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { organicGrowthPage } from "@/components/services/organicGrowthData";
+import { paidGrowthPage } from "@/components/services/paidGrowthData";
 import { ServiceApproachSection } from "@/components/services/ServiceApproachSection";
 import { ServiceCtaSection } from "@/components/services/ServiceCtaSection";
 import { ServiceDeliverablesSection } from "@/components/services/ServiceDeliverablesSection";
@@ -7,30 +7,34 @@ import { ServiceExpectationsSection } from "@/components/services/ServiceExpecta
 import { ServiceFaqSection } from "@/components/services/ServiceFaqSection";
 import { ServiceHeroSection } from "@/components/services/ServiceHeroSection";
 import { ServiceIncludesSection } from "@/components/services/ServiceIncludesSection";
+import { ServicePaidAudienceSection } from "@/components/services/ServicePaidAudienceSection";
 import { ServiceProblemSection } from "@/components/services/ServiceProblemSection";
 import { ServiceRelatedSection } from "@/components/services/ServiceRelatedSection";
-import { ServiceVerticalsSection } from "@/components/services/ServiceVerticalsSection";
 import { FooterSection } from "@/components/home/FooterSection";
 import { Navbar } from "@/components/home/Navbar";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: "Organic Growth | Cubency",
+  title: "Paid Growth | Cubency",
   description:
-    "SEO, content and social as one organic growth plan — visibility that compounds instead of visibility you rent.",
+    "Paid search, social and programmatic campaigns with full visibility into spend and return — every pound spent, accounted for.",
 };
 
-export default function OrganicGrowthServicePage() {
-  const page = organicGrowthPage;
+export default function PaidGrowthServicePage() {
+  const page = paidGrowthPage;
 
   return (
-    <main className="flex min-w-0 flex-1 flex-col overflow-x-clip bg-white">
+    <main className="flex min-w-0 flex-1 flex-col overflow-x-clip bg-[#f9f9f9]">
       <Reveal trigger="mount" direction="down">
         <Navbar activeLink="Services" />
       </Reveal>
-      <ServiceHeroSection hero={page.hero} images={[...page.heroImages]} />
+      <div className="bg-white">
+        <ServiceHeroSection hero={page.hero} images={[...page.heroImages]} />
+      </div>
       <Reveal direction="up">
-        <ServiceProblemSection content={page.problem} />
+        <div className="bg-white">
+          <ServiceProblemSection content={page.problem} />
+        </div>
       </Reveal>
       <Reveal direction="fade">
         <ServiceIncludesSection
@@ -40,28 +44,37 @@ export default function OrganicGrowthServicePage() {
         />
       </Reveal>
       <Reveal direction="up">
-        <ServiceVerticalsSection
-          content={page.verticals}
-          assets={page.verticalsAssets}
-        />
+        <ServicePaidAudienceSection content={page.audience} />
       </Reveal>
       <Reveal direction="up">
-        <ServiceApproachSection content={page.approach} />
+        <div className="bg-white">
+          <ServiceApproachSection content={page.approach} />
+        </div>
       </Reveal>
       <Reveal direction="up">
-        <ServiceDeliverablesSection content={page.deliverables} />
+        <div className="bg-white">
+          <ServiceDeliverablesSection content={page.deliverables} />
+        </div>
       </Reveal>
       <Reveal direction="left">
-        <ServiceExpectationsSection content={page.expectations} />
+        <div className="bg-white">
+          <ServiceExpectationsSection content={page.expectations} />
+        </div>
       </Reveal>
       <Reveal direction="up">
-        <ServiceRelatedSection content={page.related} />
+        <div className="bg-white">
+          <ServiceRelatedSection content={page.related} />
+        </div>
       </Reveal>
       <Reveal direction="up">
-        <ServiceFaqSection faqs={[...page.faqs]} />
+        <div className="bg-white">
+          <ServiceFaqSection faqs={[...page.faqs]} />
+        </div>
       </Reveal>
       <Reveal direction="up">
-        <ServiceCtaSection content={page.cta} />
+        <div className="bg-white">
+          <ServiceCtaSection content={page.cta} />
+        </div>
       </Reveal>
       <Reveal direction="up">
         <FooterSection />

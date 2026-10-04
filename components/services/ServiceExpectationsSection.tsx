@@ -1,9 +1,15 @@
-import { expectationsContent } from "@/components/services/organicGrowthData";
+import type { ServiceExpectationsContent } from "@/components/services/servicePageTypes";
 import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
-export function ServiceExpectationsSection() {
-  const { testimonial } = expectationsContent;
+type ServiceExpectationsSectionProps = {
+  content: ServiceExpectationsContent;
+};
+
+export function ServiceExpectationsSection({
+  content,
+}: ServiceExpectationsSectionProps) {
+  const { testimonial } = content;
 
   return (
     <section className="bg-white py-12 lg:py-[50px] lg:pb-25">
@@ -12,14 +18,14 @@ export function ServiceExpectationsSection() {
           <div className="flex flex-1 flex-col gap-6 lg:gap-[30px]">
             <div className="flex flex-col gap-3">
               <h2 className="text-[32px] font-semibold leading-[1.1] text-blue-900 lg:text-[56px] lg:leading-[61.6px]">
-                {expectationsContent.title}
+                {content.title}
               </h2>
               <SectionLabel className="lg:[&_span:last-child]:text-[#6a6a6a]">
-                {expectationsContent.label}
+                {content.label}
               </SectionLabel>
             </div>
             <p className="max-w-[645px] text-base leading-[22.4px] text-[#010205]">
-              {expectationsContent.body}
+              {content.body}
             </p>
           </div>
 
