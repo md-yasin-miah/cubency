@@ -8,7 +8,7 @@ export function AboutTeamSection() {
       <PageContainer>
         <div className="flex flex-col items-center gap-5 lg:gap-[60px]">
           <div className="flex max-w-[880px] flex-col items-center gap-4 text-center lg:gap-4">
-            <h2 className="text-[26px] font-semibold leading-[1.25] text-black lg:text-[56px] lg:leading-[61.6px]">
+            <h2 className="text-[26px] font-semibold leading-[1.25] text-black lg:text-[56px] lg:leading-[61.6px] lg:text-blue-900">
               The Team Behind the Work
             </h2>
             <p className="max-w-[519px] text-[15px] leading-normal text-grey-muted lg:text-base lg:tracking-[-0.72px]">

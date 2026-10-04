@@ -17,7 +17,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col bg-white">
+    <main className="flex min-w-0 flex-1 flex-col overflow-x-clip bg-white">
       <Reveal trigger="mount" direction="down">
         <Navbar />
       </Reveal>

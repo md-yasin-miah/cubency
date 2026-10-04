@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-1 flex-col bg-white">
+    <main className="flex min-w-0 flex-1 flex-col overflow-x-clip bg-white">
       <Reveal trigger="mount" direction="down">
-        <Navbar activeLink="About Us" />
+        <Navbar activeLink="Why Cubency" />
       </Reveal>
       <AboutHeroSection />
       <Reveal direction="up">

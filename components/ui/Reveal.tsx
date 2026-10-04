@@ -27,17 +27,20 @@ export function Reveal({
 }: RevealProps) {
   const reduceMotion = useReducedMotion();
 
-  if (reduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   const transition = getRevealTransition(delay);
   const initial = getRevealInitial(direction);
+  const wrapperClass = ["min-w-0 overflow-x-clip", className]
+    .filter(Boolean)
+    .join(" ");
+
+  if (reduceMotion) {
+    return <div className={wrapperClass}>{children}</div>;
+  }
 
   if (trigger === "mount") {
     return (
       <motion.div
-        className={className}
+        className={wrapperClass}
         initial={initial}
         animate={REVEAL_VISIBLE}
         transition={transition}
@@ -49,7 +52,7 @@ export function Reveal({
 
   return (
     <motion.div
-      className={className}
+      className={wrapperClass}
       initial={initial}
       whileInView={REVEAL_VISIBLE}
       viewport={REVEAL_VIEWPORT}

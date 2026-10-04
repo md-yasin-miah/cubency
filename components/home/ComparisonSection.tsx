@@ -56,7 +56,7 @@ const rows: Row[] = [
 
 export function ComparisonSection() {
   return (
-    <section className="py-16 lg:py-25">
+    <section className="min-w-0 py-16 lg:py-25">
       <PageContainer>
         <div className="mx-auto mb-[60px] flex max-w-[880px] flex-col gap-4 text-center">
           <h2 className="text-[36px] font-semibold leading-[1.1] tracking-tight text-black lg:text-[56px] lg:leading-[61.6px]">
@@ -69,7 +69,7 @@ export function ComparisonSection() {
           </p>
         </div>
 
-        <div className="overflow-x-auto rounded-[20px] bg-navy-dark px-8 py-[50px]">
+        <div className="min-w-0 max-w-full overflow-x-auto rounded-[20px] bg-navy-dark px-8 py-[50px]">
           <div className={`flex flex-col ${TABLE_MIN_W}`}>
             <div className={`hidden pb-8 lg:grid ${ROW_GRID}`}>
               <div aria-hidden />

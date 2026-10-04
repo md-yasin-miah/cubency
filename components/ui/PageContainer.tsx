@@ -8,7 +8,7 @@ export function PageContainer({
   className = "",
 }: PageContainerProps) {
   return (
-    <div className={`mx-auto w-full max-w-360 px-6 lg:px-12.5 ${className}`}>
+    <div className={`mx-auto min-w-0 w-full max-w-360 px-6 lg:px-12.5 ${className}`}>
       {children}
     </div>
   );

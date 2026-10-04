@@ -20,6 +20,7 @@ export type ProcessStep = {
   number: string;
   title: string;
   description: string;
+  icon: string;
 };
 
 export const values: Value[] = [
@@ -89,28 +90,40 @@ export const processSteps: ProcessStep[] = [
     title: "Advisory & Strategy",
     description:
       "A one-off strategic review to assess where the opportunity is before you commit to anything.",
+    icon: "/images/about/process-advisory.svg",
   },
   {
     number: "02",
     title: "Project Engagement",
     description:
       "A defined project with a clear scope, timeline and outcome — no ongoing retainer required.",
+    icon: "/images/about/process-project.svg",
   },
   {
     number: "03",
     title: "Retainer Partnership",
     description:
       "Ongoing monthly support across the services you need, with a team that already knows your business.",
+    icon: "/images/about/process-retainer.svg",
   },
   {
     number: "04",
     title: "Dedicated Growth Team",
     description:
       "A fully embedded team that plans, executes and reports on your growth as if we were in-house.",
+    icon: "/images/about/process-team.svg",
   },
 ];
 
-export const philosophyParagraphs = [
-  "Too many marketing plans start with a channel. Someone decides you need SEO, or ads, or a rebrand, before anyone has properly looked at the business behind it. We think that is backwards. As a research-led digital marketing agency, we study your business, your market and what is already working before we recommend anything. Only then do we build a plan.",
-  "It means we will not sell you a package before we understand your goals. Our proposals are built around your business, not a template we reuse for every client. And we would rather say no to the wrong project than say yes and deliver something generic.",
-];
+export const philosophyIntro = {
+  primary:
+    "Too many marketing plans start with a channel. Someone decides you need SEO, or ads, or a rebrand, before anyone has properly looked at the business behind it. We think that is backwards.",
+  secondary:
+    "As a research-led digital marketing agency, we study your business, your market and what is already working before we recommend anything. Only then do we build a plan.",
+};
+
+export const philosophyClosing =
+  "It means we will not sell you a package before we understand your goals. Our proposals are built around your business, not a template we reuse for every client. And we would rather say no to the wrong project than say yes and deliver something generic.";
+
+export const processIntro =
+  "Four ways to work together, from a one-off strategic review to a fully embedded growth team. Whichever you choose, we start with research.";

@@ -106,6 +106,27 @@ export function XIcon({ className, size = 32 }: IconProps) {
   );
 }
 
+export function ChevronDownIcon({ className, size = 16 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      className={className}
+      aria-hidden
+    >
+      <path
+        d="M4 6L8 10L12 6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function MenuIcon({ className, size = 24 }: IconProps) {
   return (
     <svg

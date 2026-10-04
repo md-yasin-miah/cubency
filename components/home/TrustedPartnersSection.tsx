@@ -169,7 +169,7 @@ function PartnerMarqueeRow({
 
 export function TrustedPartnersSection() {
   return (
-    <section className="py-16 lg:py-25">
+    <section className="overflow-x-hidden py-16 lg:py-25">
       <PageContainer>
         <div className="flex items-center gap-1.5">
           <span className="h-px w-[58px] shrink-0 bg-[#454545]" />
