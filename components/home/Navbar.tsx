@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRightIcon, ChevronDownIcon, MenuIcon } from "@/components/ui/icons";
+import { ServicesDropdown } from "@/components/home/ServicesDropdown";
+import { ArrowUpRightIcon, MenuIcon } from "@/components/ui/icons";
 import { PageContainer } from "@/components/ui/PageContainer";
 
 const navLinks = [
-  { label: "Services", href: "#", showChevron: true },
   { label: "Industries", href: "#" },
   { label: "Insights", href: "#" },
   { label: "Why Cubency", href: "/about" },
@@ -30,20 +30,18 @@ export function Navbar({ activeLink }: NavbarProps) {
         </Link>
 
         <ul className="hidden items-center gap-5 capitalize lg:flex">
+          <ServicesDropdown isActive={activeLink === "Services"} />
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
-                className={`inline-flex items-center gap-1.5 text-base font-medium text-blue-900 transition-colors hover:text-blue-500 ${
+                className={`text-base font-medium text-blue-900 transition-colors hover:text-blue-500 ${
                   activeLink === link.label
                     ? "rounded-[17px] border border-blue-100 bg-blue-50 px-2 py-2"
                     : ""
                 }`}
               >
                 {link.label}
-                {link.showChevron ? (
-                  <ChevronDownIcon size={16} className="shrink-0" />
-                ) : null}
               </Link>
             </li>
           ))}
